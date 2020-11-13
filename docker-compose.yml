@@ -2,14 +2,14 @@ version: "3"
 
 services:
 
-  # front:
-  #   build: front
-  #   volumes:
-  #     - ./front:/home/node/app
-  #   ports:
-  #     - "4200:4200"
-  #   networks:
-  #     - bridge
+  front:
+    build: front
+    volumes:
+      - ./front:/home/node/app
+    ports:
+      - "4200:4200"
+    networks:
+      - bridge
 
   back:
     build: back
