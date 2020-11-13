@@ -30,7 +30,7 @@ app.use(session({
 // var Notes = require('../notes/Notes');
 // app.use('/v1.1/notes', Notes);
 
-// var User = require('../user/User');
-// app.use('/v1.1/user', User);
+var User = require('../routes/user');
+app.use('/user', User);
 
 module.exports = app;
