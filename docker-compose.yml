@@ -2,14 +2,14 @@ version: "3"
 
 services:
 
-  # front:
-  #   build: front
-  #   volumes:
-  #     - ./front:/home/node/app
-  #   ports:
-  #     - "4200:4200"
-  #   networks:
-  #     - bridge
+  front:
+    build: front
+    volumes:
+      - ./front:/home/node/app
+    ports:
+      - "8080:8080"
+    networks:
+      - bridge
 
   back:
     build: back
@@ -28,7 +28,7 @@ services:
     restart: unless-stopped
     command: --default-authentication-plugin=mysql_native_password
     environment:
-      - MYSQL_DATABASE=noteDeFrais
+      - MYSQL_DATABASE=countOfMoney
       - MYSQL_USER=admin
       - MYSQL_PASSWORD=admin
       - MYSQL_RANDOM_ROOT_PASSWORD=yes
