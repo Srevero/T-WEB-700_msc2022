@@ -27,10 +27,7 @@ app.use(session({
     cookie: { maxAge: 365 * 24 * 60 * 60 * 1000}
 }));
 
-// var Notes = require('../notes/Notes');
-// app.use('/v1.1/notes', Notes);
-
 var User = require('../routes/user');
-app.use('/user', User);
+app.use('/users', User);
 
 module.exports = app;

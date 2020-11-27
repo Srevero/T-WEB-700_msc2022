@@ -14,3 +14,4 @@ CREATE TABLE `Role` (
 ALTER TABLE `User` ADD FOREIGN KEY (`role`) REFERENCES `Role` (`id`);
 
 INSERT INTO Role Values (1,'admin');
+INSERT INTO Role Values (2,'user');

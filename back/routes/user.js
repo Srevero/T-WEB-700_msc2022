@@ -4,7 +4,8 @@ var db = require('../db');
 var bodyParser = require('body-parser');
 var sql = require("mssql");
 var sha256 = require("sha256");
-var jwtUtils = require('../utils/jwt.utils')
+var jwtUtils = require('../utils/jwt.utils');
+const { token } = require('morgan');
 
 router.use(bodyParser.json());
 
@@ -23,7 +24,7 @@ router.post('/register', async function (req, res) {
                     return res.status(401).json({'error':'user already exists'});
                 } 
             });
-            let param = [username,sha256(password),1];
+            let param = [username,sha256(password),2];
             db.query('INSERT INTO User (username,password,role) values (?,?,?)',param,function(err,result){
                 if(err){ console.log("Erreur INSERT:"+err); }else { console.log("Insert ok"); }
             });
@@ -37,7 +38,6 @@ router.post('/register', async function (req, res) {
 
 router.post('/login', async function (req, res) {
     try {
-        let body={login:req.body.username ,password:req.body.password};
         let erreur;
         let id;
         
@@ -57,13 +57,13 @@ router.post('/login', async function (req, res) {
                     }
                 });
                 if(cpt == 1){
-                    let token = jwtUtils.generateTokenForUser(req.body.username);
-                    db.query('UPDATE User SET token = \'' + token + '\' WHERE User.id =\''+id+'\'', token, function(err,result){
+                    let token = jwtUtils.generateTokenForUser(id);
+                    db.query('UPDATE User SET token = \'' + token + '\' WHERE User.id =\''+id+'\'', function(err,result){
                         if(err){ console.log("Erreur INSERT:"+err); }else { console.log("Insert ok"); }
                     });
                     res.status(200).json({
                         'response' : 'Connexion',
-                        'token' : jwtUtils.generateTokenForUser(req.body.username)
+                        'token' : token
                     });
                 }
                 else
@@ -82,6 +82,54 @@ router.post('/login', async function (req, res) {
         res.sendStatus(500);
     }
 });
+
+router.post('/logout',async function(req, res) {
+    try{
+        userId = req.body.id;
+        db.query('UPDATE User SET token = \''+null+'\' WHERE User.id = \''+userId+'\'', function(err,result){
+            if(err){ console.log("Erreur Delete:"+err); }else { console.log("Delete ok"); }
+        });
+        res.status(200).json({
+            'response' : 'Logout Ok',
+        });
+    } catch(err){        
+        res.sendStatus(500);
+    }
+});
+
+router.get('/profile', async function(req,res) {
+    try{
+        console.log(req.query);
+        userId = req.query.id;
+        db.query('SELECT * FROM User WHERE User.id = \''+userId+'\'', function(err,result){
+            res.status(200).json(result);
+        })
+    }catch{
+        res.sendStatus(500);
+    }
+});
+
+router.put('/profile', async function(req,res) {
+    let token = req.body.token;
+    let usernameModif = req.body.username;
+    await getUser(async function(data){
+        await data.forEach(element => {
+            if(req.body.username == element.username){
+                return res.status(401).json({'error':'user already exists'});
+            } 
+        });
+        if(jwtUtils.verifToken(token)){
+            userId = req.body.id;
+
+            db.query('UPDATE User SET username=\''+ usernameModif +'\' WHERE User.id = \''+userId+'\'', function(err,result){
+                res.status(200).json(result);
+            })
+        }else{
+            console.log(jwtUtils.verify(token));
+        }
+    });
+});
+
 
 async function getUser(callback){
     let result="";
