@@ -6,8 +6,10 @@
         <router-link :to="home"></router-link>
       </v-btn>
     </v-row>
-    <v-row>
-      Epitech Cryptocurrencies Dashboard - {{ new Date().getFullYear() }}
+    <v-row >
+      <router-link :to="'/'" class="btnFooter">
+        Epitech Cryptocurrencies Dashboard - {{ new Date().getFullYear() }}
+      </router-link>
     </v-row>
   </v-footer>
 </template>
@@ -19,5 +21,8 @@ export default {
 </script>
 
 <style scoped>
-
+  .btnFooter {
+    text-decoration: none;
+    color: black;
+  }
 </style>

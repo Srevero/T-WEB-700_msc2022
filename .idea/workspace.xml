@@ -27,9 +27,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="823219b0-276e-4378-ab93-9138591f7d1e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/front/src/Views/Register.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/src/Views/Login.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/Views/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Views/Home.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front/src/components/Footer.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/components/Footer.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front/src/components/Header.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/components/Header.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/router/index.js" afterDir="false" />
@@ -141,6 +140,10 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="608" y="335" width="752" height="252" key="MultipleFileMergeDialog/0.23.1440.877@0.23.1440.877" timestamp="1606492092753" />
+    <state width="500" height="445" key="SwitcherDM" timestamp="1606651874377">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="500" height="445" key="SwitcherDM/0.23.1440.877@0.23.1440.877" timestamp="1606651874377" />
     <state x="508" y="382" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1606649211974">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
