@@ -2,16 +2,17 @@
   <div>
     <Header></Header>
     <Footer></Footer>
-    <p> Je suis le login </p>
+    <LoginForm></LoginForm>
   </div>
 </template>
 
 <script>
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import LoginForm from '../components/LoginForm'
 export default {
   name: 'Login',
-  components: {Footer, Header}
+  components: {LoginForm, Footer, Header}
 }
 </script>
 
