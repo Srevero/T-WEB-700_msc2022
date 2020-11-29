@@ -1,7 +1,6 @@
 <template>
   <div id="app">
       <v-toolbar dense fixed app height="70px">
-        <v-toolbar-side-icon></v-toolbar-side-icon>
         <v-img
           lazy-src="https://image.winudf.com/v2/image1/bmV0LmRld2VwLmludHJhbmV0ZXBpdGVjaF9pY29uXzE1NjcwMTU4MzhfMDU5/icon.png?w=340&fakeurl=1"
           max-height="50"
@@ -33,12 +32,6 @@
           </v-btn>
         </v-toolbar-items>
       </v-toolbar>
-      <v-content>
-        <v-container fill-height>
-          <v-layout>
-          </v-layout>
-        </v-container>
-      </v-content>
   </div>
 </template>
 

@@ -19,26 +19,20 @@
     <select>
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:dev" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:origin/BrasseurDev" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="823219b0-276e-4378-ab93-9138591f7d1e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/front/src/assets/epitech_logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front/src/assets/epitech_logo.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/src/components/Footer.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/build/vue-loader.conf.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/build/vue-loader.conf.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/front/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/App.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front/src/Views/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Views/Home.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front/src/components/Header.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/components/Header.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/plugins/vuetify.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/plugins/vuetify.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/router/index.js" afterDir="false" />
     </list>
+    <list id="b95018d6-f6e1-49e9-8060-f49b065a0d66" name="Revert &quot;[ADD] new database struct&quot;" comment="Revert &quot;[ADD] new database struct&quot;&#10;&#10;This reverts commit b327c5d8" />
     <list id="3f791236-a9cc-488e-8b28-4f9b3b3cebcc" name="Revert &quot;yolo&quot;" comment="Revert &quot;yolo&quot;&#10;&#10;This reverts commit 25045a3f" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,8 +42,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Vue Single File Component" />
         <option value="JavaScript File" />
+        <option value="Vue Single File Component" />
       </list>
     </option>
   </component>
@@ -119,7 +113,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="dev" />
+                        <option value="origin/BrasseurDev" />
                       </list>
                     </value>
                   </entry>
@@ -137,17 +131,17 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="232" y="379" key="#ESLint/0.23.1440.877@0.23.1440.877" timestamp="1606641847298" />
-    <state x="310" y="34" key="CommitChangelistDialog2" timestamp="1606488729691">
+    <state x="310" y="34" key="CommitChangelistDialog2" timestamp="1606649231888">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="310" y="34" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1606488729691" />
+    <state x="310" y="34" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1606649231888" />
     <state x="608" y="335" width="752" height="252" key="MultipleFileMergeDialog" timestamp="1606492092753">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="608" y="335" width="752" height="252" key="MultipleFileMergeDialog/0.23.1440.877@0.23.1440.877" timestamp="1606492092753" />
-    <state x="508" y="382" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1606492082919">
+    <state x="508" y="382" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1606649211974">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="508" y="382" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.877@0.23.1440.877" timestamp="1606492082919" />
+    <state x="508" y="382" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.877@0.23.1440.877" timestamp="1606649211974" />
   </component>
 </project>
