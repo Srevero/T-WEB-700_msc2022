@@ -1,8 +1,9 @@
+/* eslint-disable */
 <template>
   <div>
     <Header></Header>
     <Footer></Footer>
-    <p> Je suis home </p>
+    <p> Je suis le register </p>
   </div>
 </template>
 
@@ -10,7 +11,7 @@
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 export default {
-  name: 'Home',
+  name: 'Register',
   components: {Footer, Header}
 }
 </script>

@@ -1,3 +1,4 @@
+/* eslint-disable */
 <template>
   <div id="app">
       <v-toolbar dense fixed app height="70px">
@@ -11,16 +12,13 @@
         <v-spacer></v-spacer>
         <v-toolbar-items class="hidden-sm-and-down">
           <v-btn text>
-            Home
-            <router-link :to="home"></router-link>
+            <router-link :to="'/'" class="btnHeader"> Home </router-link>
           </v-btn>
           <v-btn text>
-            Press
-            <router-link :to="home"></router-link>
+            <router-link :to="'/'" class="btnHeader"> Press </router-link>
           </v-btn>
           <v-btn text>
-            Register
-            <router-link :to="home"></router-link>
+            <router-link :to="'/register'" class="btnHeader"> Register </router-link>
           </v-btn>
           <v-btn text>
             <v-img
@@ -42,5 +40,8 @@ export default {
 </script>
 
 <style scoped>
-
+  .btnHeader {
+    text-decoration: none;
+    color: black;
+  }
 </style>

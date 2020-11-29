@@ -1,3 +1,4 @@
+/* eslint-disable */
 <template>
   <v-footer absolute height="70px">
     <v-row>
@@ -12,9 +13,9 @@
 </template>
 
 <script>
-    export default {
-        name: "Footer"
-    }
+export default {
+  name: 'Footer'
+}
 </script>
 
 <style scoped>
