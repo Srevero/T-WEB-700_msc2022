@@ -2,6 +2,7 @@
   <v-card class="registerCard">
     <h1> Register </h1>
     <v-text-field
+      v-model="username"
       type="username"
       placeholder="username"
       class="textFieldRegister"
@@ -16,6 +17,7 @@
       dense
     ></v-text-field>
     <v-text-field
+      v-model="password"
       type="password"
       placeholder="password"
       class="textFieldRegister"
@@ -30,6 +32,7 @@
       dense
     ></v-text-field>
     <v-btn
+      @click="register"
       elevation="2"
       class="btnRegister"
     > Register </v-btn>
@@ -42,8 +45,25 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
-  name: 'RegisterForm'
+  name: 'RegisterForm',
+  data () {
+    return {
+      username: "",
+      password: ""
+    }
+  },
+  methods: {
+    register () {
+      axios.post('http://localhost:3000/users/register',{
+        username: this.username,
+        password: this.password
+      })
+      .then(response => {console.log(response)})
+      .catch(error => {console.log(error)})
+    }
+  }
 }
 </script>
 

@@ -2,6 +2,7 @@
   <v-card class="loginCard">
     <h1> Login </h1>
     <v-text-field
+      v-model="username"
       type="username"
       placeholder="username"
       class="textFieldLogin"
@@ -16,6 +17,7 @@
       dense
     ></v-text-field>
     <v-text-field
+      v-model="password"
       type="password"
       placeholder="password"
       class="textFieldLogin"
@@ -23,6 +25,7 @@
       dense
     ></v-text-field>
     <v-btn
+      @click="login"
       elevation="2"
       class="btnLogin"
     > Login </v-btn>
@@ -36,8 +39,31 @@
 </template>
 
 <script>
+import axios from "axios";
+
 export default {
-  name: 'LoginForm'
+  name: 'LoginForm',
+  data() {
+    return {
+      username:"",
+      password: ""
+    }
+  },
+  methods: {
+    login () {
+      axios.post('http://localhost:3000/users/login',{
+        username: this.username,
+        password: this.password
+      })
+        .then(response => {
+          localStorage.setItem("JWT",response.data.token);
+          console.log(response.data);
+        })
+        // recup token localStorage.getItem("JWT")
+        // remove token localStorafe.removeItem("JWT")
+        .catch(error => {console.log(error)})
+    }
+  }
 }
 </script>
 

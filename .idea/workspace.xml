@@ -27,9 +27,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="823219b0-276e-4378-ab93-9138591f7d1e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/front/src/components/LoginForm.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/.env.exemple" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/Views/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Views/Login.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/requires/app_v1-1.js" beforeDir="false" afterPath="$PROJECT_DIR$/back/requires/app_v1-1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/front/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/front/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/front/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/components/LoginForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/components/LoginForm.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/components/RegisterForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/components/RegisterForm.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/main.js" afterDir="false" />
     </list>
     <list id="b95018d6-f6e1-49e9-8060-f49b065a0d66" name="Revert &quot;[ADD] new database struct&quot;" comment="Revert &quot;[ADD] new database struct&quot;&#10;&#10;This reverts commit b327c5d8" />
     <list id="3f791236-a9cc-488e-8b28-4f9b3b3cebcc" name="Revert &quot;yolo&quot;" comment="Revert &quot;yolo&quot;&#10;&#10;This reverts commit 25045a3f" />
@@ -101,6 +108,9 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
   </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.env" />
+  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
@@ -130,6 +140,10 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="232" y="379" key="#ESLint/0.23.1440.877@0.23.1440.877" timestamp="1606641847298" />
+    <state x="427" y="270" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1606932408241">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="427" y="270" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.877@0.23.1440.877" timestamp="1606932408241" />
     <state x="310" y="34" key="CommitChangelistDialog2" timestamp="1606649231888">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -146,5 +160,9 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="508" y="382" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.877@0.23.1440.877" timestamp="1606649211974" />
+    <state x="385" y="213" width="670" height="676" key="search.everywhere.popup" timestamp="1606932270784">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="385" y="213" width="670" height="676" key="search.everywhere.popup/0.23.1440.877@0.23.1440.877" timestamp="1606932270784" />
   </component>
 </project>
