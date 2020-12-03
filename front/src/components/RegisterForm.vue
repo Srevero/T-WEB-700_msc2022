@@ -60,7 +60,10 @@ export default {
         username: this.username,
         password: this.password
       })
-      .then(response => {console.log(response)})
+      .then(response => {
+        console.log(response)
+        this.$router.push({name: 'Login'});
+      })
       .catch(error => {console.log(error)})
     }
   }

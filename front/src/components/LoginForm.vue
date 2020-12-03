@@ -58,6 +58,7 @@ export default {
         .then(response => {
           localStorage.setItem("JWT",response.data.token);
           console.log(response.data);
+          this.$router.push({name: 'Home'});
         })
         // recup token localStorage.getItem("JWT")
         // remove token localStorafe.removeItem("JWT")
