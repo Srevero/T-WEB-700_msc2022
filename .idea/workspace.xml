@@ -19,20 +19,13 @@
     <select>
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:origin/BrasseurDev" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:BrasseurDev" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="823219b0-276e-4378-ab93-9138591f7d1e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/requires/app_v1-1.js" beforeDir="false" afterPath="$PROJECT_DIR$/back/requires/app_v1-1.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/components/LoginForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/components/LoginForm.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/components/RegisterForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/components/RegisterForm.vue" afterDir="false" />
-    </list>
+    <list default="true" id="823219b0-276e-4378-ab93-9138591f7d1e" name="Default Changelist" comment="" />
     <list id="b95018d6-f6e1-49e9-8060-f49b065a0d66" name="Revert &quot;[ADD] new database struct&quot;" comment="Revert &quot;[ADD] new database struct&quot;&#10;&#10;This reverts commit b327c5d8" />
     <list id="3f791236-a9cc-488e-8b28-4f9b3b3cebcc" name="Revert &quot;yolo&quot;" comment="Revert &quot;yolo&quot;&#10;&#10;This reverts commit 25045a3f" />
     <option name="SHOW_DIALOG" value="false" />
@@ -79,11 +72,11 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/front" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/front/src/assets" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/front" />
     </key>
   </component>
   <component name="SvnConfiguration">
