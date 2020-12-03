@@ -6,12 +6,6 @@ var cors = require('cors');
 
 var app = express();
 
-// var corsOptions = {
-//     origin: "http://localhost:8080"
-// };
-//
-// app.use(cors(corsOptions));
-
 // set morgan to log info about our requests for development use.
 app.use(morgan('dev'));
 
