@@ -1,0 +1,568 @@
+{
+    "openapi" : "3.0.1",
+    "info" : {
+      "title" : "API Note de frais",
+      "description" : "Documentation technique de l'API pour l'application note de frais",
+      "version" : "1.1"
+    },
+    "servers" : [ {
+      "url" : "http://XXX.lpweb-lannion.fr:3000"
+    }, {
+      "url" : "http://localhost:3000"
+    } ],
+    "tags" : [ {
+      "name" : "User"
+    }, {
+      "name" : "Notes"
+    } ],
+    "paths" : {
+      "/v1.1/notes/userName" : {
+        "get" : {
+          "tags" : [ "Notes" ],
+          "description" : "Renvoie l'intégralité des utilisateurs enregistrés dans l'application",
+          "responses" : {
+            "200" : {
+              "description" : "Liste d'utilisateurs",
+              "content" : {
+                "application/json; charset=utf-8" : {
+                  "schema" : {
+                    "type" : "string"
+                  },
+                  "examples" : { }
+                }
+              }
+            }
+          },
+          "servers" : [ {
+            "url" : "http://localhost:3000"
+          } ]
+        },
+        "servers" : [ {
+          "url" : "http://localhost:3000"
+        } ]
+      },
+      "/v1.1/user/get_token" : {
+        "get" : {
+          "tags" : [ "User" ],
+          "description" : "Renvoie le token de l'utilisateur courant",
+          "responses" : {
+            "200" : {
+              "description" : "Token",
+              "content" : {
+                "application/json; charset=utf-8" : {
+                  "schema" : {
+                    "type" : "string"
+                  },
+                  "examples" : { }
+                }
+              }
+            }
+          },
+          "servers" : [ {
+            "url" : "http://localhost:3000"
+          } ]
+        },
+        "servers" : [ {
+          "url" : "http://localhost:3000"
+        } ]
+      },
+      "/v1.1/notes/search" : {
+        "post" : {
+          "tags" : [ "Notes" ],
+          "description" : "Permet de recherche des notes de frais par intervalle de date de début de mission",
+          "requestBody" : {
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/body"
+                },
+                "examples" : {
+                  "0" : {
+                    "value" : "{\n    \"dateDebut\": \"2020-03-20\",\n    \"dateFin\": \"2020-03-30\"\n}"
+                  }
+                }
+              }
+            }
+          },
+          "responses" : {
+            "200" : {
+              "description" : "Renvoie un tableau de notes de frais",
+              "content" : {
+                "application/json; charset=utf-8" : {
+                  "schema" : {
+                    "type" : "string"
+                  },
+                  "examples" : { }
+                }
+              }
+            }
+          },
+          "servers" : [ {
+            "url" : "http://localhost:3000"
+          } ]
+        },
+        "servers" : [ {
+          "url" : "http://localhost:3000"
+        } ]
+      },
+      "/v1.1/notes/typeDeFrais" : {
+        "get" : {
+          "tags" : [ "Notes" ],
+          "description" : "Permet de récupérer l'id des types de frais ainsi que leur libellé",
+          "responses" : {
+            "200" : {
+              "description" : "Renvoie un tableau de types de frais",
+              "content" : {
+                "application/json; charset=utf-8" : {
+                  "schema" : {
+                    "type" : "string"
+                  },
+                  "examples" : { }
+                }
+              }
+            }
+          },
+          "servers" : [ {
+            "url" : "http://localhost:3000"
+          } ]
+        },
+        "servers" : [ {
+          "url" : "http://localhost:3000"
+        } ]
+      },
+      "/v1.1/user/login" : {
+        "post" : {
+          "tags" : [ "User" ],
+          "description" : "Permet de connecter un utilisateur s'il a bien renseigné son nom d'utilisateur et son mot de passe",
+          "requestBody" : {
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/body_1"
+                },
+                "examples" : {
+                  "0" : {
+                    "value" : "{\n    \"username\": \"michel\",\n    \"password\": \"dgjhED54Vreg5Vx\"\n}"
+                  }
+                }
+              }
+            }
+          },
+          "responses" : {
+            "200" : {
+              "description" : "Renvoie 1 si l'utilisateur s'est bien connecté, 0 sinon",
+              "content" : {
+                "application/json; charset=utf-8" : {
+                  "schema" : {
+                    "type" : "string"
+                  },
+                  "examples" : { }
+                }
+              }
+            }
+          },
+          "servers" : [ {
+            "url" : "http://localhost:3000"
+          } ]
+        },
+        "servers" : [ {
+          "url" : "http://localhost:3000"
+        } ]
+      },
+      "/v1.1/notes/search/a" : {
+        "get" : {
+          "tags" : [ "Notes" ],
+          "description" : "Permet de récupérer des notes de frais par le nom de l'utilisateur l'ayant soumise. Renvoie toute note de frais dont le nom OU prenom de l'auteur correspond à la chaine de caractères renseignée.",
+          "responses" : {
+            "200" : {
+              "description" : "Tableau de notes de frais",
+              "content" : {
+                "application/json; charset=utf-8" : {
+                  "schema" : {
+                    "type" : "string"
+                  },
+                  "examples" : { }
+                }
+              }
+            }
+          },
+          "servers" : [ {
+            "url" : "http://localhost:3000"
+          } ]
+        },
+        "servers" : [ {
+          "url" : "http://localhost:3000"
+        } ]
+      },
+      "/v1.1/notes/status" : {
+        "get" : {
+          "tags" : [ "Notes" ],
+          "description" : "Permet de récupérer l'id des statuts de note de frais ainsi que leur libellé",
+          "responses" : {
+            "200" : {
+              "description" : "Renvoie un JSON des statuts",
+              "content" : {
+                "application/json; charset=utf-8" : {
+                  "schema" : {
+                    "type" : "string"
+                  },
+                  "examples" : { }
+                }
+              }
+            }
+          },
+          "servers" : [ {
+            "url" : "http://localhost:3000"
+          } ]
+        },
+        "servers" : [ {
+          "url" : "http://localhost:3000"
+        } ]
+      },
+      "/v1.1/notes/lignesDeFrais" : {
+        "get" : {
+          "tags" : [ "Notes" ],
+          "description" : "Permet de récupérer toutes les lignes de frais d'un note",
+          "parameters" : [ {
+            "name" : "id_note",
+            "in" : "query",
+            "required" : false,
+            "style" : "form",
+            "explode" : true,
+            "schema" : {
+              "type" : "string"
+            },
+            "example" : "1"
+          } ],
+          "responses" : {
+            "200" : {
+              "description" : "Renvoie un tableau de lignes de frais",
+              "content" : {
+                "application/json; charset=utf-8" : {
+                  "schema" : {
+                    "type" : "string"
+                  },
+                  "examples" : { }
+                }
+              }
+            }
+          },
+          "servers" : [ {
+            "url" : "http://localhost:3000"
+          } ]
+        },
+        "servers" : [ {
+          "url" : "http://localhost:3000"
+        } ]
+      },
+      "/v1.1/user/logout" : {
+        "get" : {
+          "tags" : [ "User" ],
+          "description" : "Permet de déconnecter l'utilisateur courant et de détruire sa session.",
+          "responses" : {
+            "200" : {
+              "description" : "Session détruite",
+              "content" : {
+                "application/json; charset=utf-8" : {
+                  "schema" : {
+                    "type" : "string"
+                  },
+                  "examples" : { }
+                }
+              }
+            }
+          },
+          "servers" : [ {
+            "url" : "http://localhost:3000"
+          } ]
+        },
+        "servers" : [ {
+          "url" : "http://localhost:3000"
+        } ]
+      },
+      "/v1.1/notes" : {
+        "get" : {
+          "tags" : [ "Notes" ],
+          "description" : "Permet de récupérer toutes les notes de frais enregistrées en base de données.",
+          "responses" : {
+            "200" : {
+              "description" : "Tableau de notes de frais",
+              "content" : {
+                "application/json; charset=utf-8" : {
+                  "schema" : {
+                    "type" : "string"
+                  },
+                  "examples" : { }
+                }
+              }
+            }
+          },
+          "servers" : [ {
+            "url" : "http://localhost:3000"
+          } ]
+        },
+        "servers" : [ {
+          "url" : "http://localhost:3000"
+        } ]
+      },
+      "/v1.1/notes/Justificatif" : {
+        "post" : {
+          "tags" : [ "Notes" ],
+          "description" : "Permet d'insérer en base un justificatif afin de le stocker",
+          "requestBody" : {
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/body_2"
+                },
+                "examples" : {
+                  "0" : {
+                    "value" : "{\n    \"justificatif\": 5,\n    \"name_justificatif\": \"justif_test\",\n    \"url_justificatif\": \"http://test.com\"\n}"
+                  }
+                }
+              }
+            }
+          },
+          "responses" : {
+            "201" : {
+              "description" : "Le justificatif a bien été ajouté en base",
+              "content" : {
+                "text/plain; charset=utf-8" : {
+                  "schema" : {
+                    "type" : "string"
+                  },
+                  "examples" : { }
+                }
+              }
+            }
+          },
+          "servers" : [ {
+            "url" : "http://localhost:3000"
+          } ]
+        },
+        "servers" : [ {
+          "url" : "http://localhost:3000"
+        } ]
+      },
+      "/v1.1/notes/HeaderNote" : {
+        "post" : {
+          "tags" : [ "Notes" ],
+          "description" : "Permet d'insérer en base de données l'entête d'une note de frais.",
+          "requestBody" : {
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/body_3"
+                },
+                "examples" : {
+                  "0" : {
+                    "value" : "{\n    \"id_note\": 5,\n    \"date_creation\": \"2020-03-20\",\n    \"date_soumission\": \"2020-03-20\",\n    \"date_mission_debut\": \"2020-03-20\",\n    \"date_mission_fin\": \"2020-03-21\",\n    \"status\": 1,\n    \"code_pin\": 123456,\n    \"commentaire\": \"test\"\n}"
+                  }
+                }
+              }
+            }
+          },
+          "responses" : {
+            "201" : {
+              "description" : "L'entête de note de frais a bien été ajouté en base",
+              "content" : {
+                "text/plain; charset=utf-8" : {
+                  "schema" : {
+                    "type" : "string"
+                  },
+                  "examples" : { }
+                }
+              }
+            }
+          },
+          "servers" : [ {
+            "url" : "http://localhost:3000"
+          } ]
+        },
+        "servers" : [ {
+          "url" : "http://localhost:3000"
+        } ]
+      },
+      "/v1.1/notes/Intermediaire" : {
+        "post" : {
+          "tags" : [ "Notes" ],
+          "description" : "Permet de peupler la base de données qui servira de liaison entre une note de frais et l'utilisateur qui l'a créé. id_pour sert dans le cas où un utilisateur soumet une note de frais pour un autre utilisateur.",
+          "requestBody" : {
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/body_4"
+                },
+                "examples" : {
+                  "0" : {
+                    "value" : "{\n    \"id_user\": 1,\n    \"id_pour\": 1,\n    \"id_note\": 1\n}"
+                  }
+                }
+              }
+            }
+          },
+          "responses" : {
+            "201" : {
+              "description" : "les informations de liaison ont bien été ajoutées en base",
+              "content" : {
+                "text/plain; charset=utf-8" : {
+                  "schema" : {
+                    "type" : "string"
+                  },
+                  "examples" : { }
+                }
+              }
+            }
+          },
+          "servers" : [ {
+            "url" : "http://localhost:3000"
+          } ]
+        },
+        "servers" : [ {
+          "url" : "http://localhost:3000"
+        } ]
+      },
+      "/v1.1/notes/LigneDeFrais" : {
+        "post" : {
+          "tags" : [ "Notes" ],
+          "description" : "Permet d'insérer en base une ligne de frais. Relie immédiatement à sa note de frais",
+          "requestBody" : {
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/body_5"
+                },
+                "examples" : {
+                  "0" : {
+                    "value" : "{\n    \"id_note\": 1\n    \"type_frais\": 1,\n    \"cout\": 100,\n    \"commentaire\": \"coucou\",\n    \"status\": 1,\n    \"justificatif\": 1\n}"
+                  }
+                }
+              }
+            }
+          },
+          "responses" : {
+            "201" : {
+              "description" : "La ligne de frais a bien été ajoutées en base",
+              "content" : {
+                "application/json; charset=utf-8" : {
+                  "schema" : {
+                    "type" : "string"
+                  },
+                  "examples" : { }
+                }
+              }
+            }
+          },
+          "servers" : [ {
+            "url" : "http://localhost:3000"
+          } ]
+        },
+        "servers" : [ {
+          "url" : "http://localhost:3000"
+        } ]
+      }
+    },
+    "components" : {
+      "schemas" : {
+        "body" : {
+          "type" : "object",
+          "properties" : {
+            "dateDebut" : {
+              "type" : "string"
+            },
+            "dateFin" : {
+              "type" : "string"
+            }
+          }
+        },
+        "body_1" : {
+          "type" : "object",
+          "properties" : {
+            "password" : {
+              "type" : "string"
+            },
+            "username" : {
+              "type" : "string"
+            }
+          }
+        },
+        "body_2" : {
+          "type" : "object",
+          "properties" : {
+            "name_justificatif" : {
+              "type" : "string"
+            },
+            "justificatif" : {
+              "type" : "integer"
+            },
+            "url_justificatif" : {
+              "type" : "string"
+            }
+          }
+        },
+        "body_3" : {
+          "type" : "object",
+          "properties" : {
+            "date_soumission" : {
+              "type" : "string"
+            },
+            "date_mission_debut" : {
+              "type" : "string"
+            },
+            "date_mission_fin" : {
+              "type" : "string"
+            },
+            "id_note" : {
+              "type" : "integer"
+            },
+            "code_pin" : {
+              "type" : "integer"
+            },
+            "commentaire" : {
+              "type" : "string"
+            },
+            "date_creation" : {
+              "type" : "string"
+            },
+            "status" : {
+              "type" : "integer"
+            }
+          }
+        },
+        "body_4" : {
+          "type" : "object",
+          "properties" : {
+            "id_pour" : {
+              "type" : "integer"
+            },
+            "id_note" : {
+              "type" : "integer"
+            },
+            "id_user" : {
+              "type" : "integer"
+            }
+          }
+        },
+        "body_5" : {
+          "type" : "object",
+          "properties" : {
+            "cout" : {
+              "type" : "integer"
+            },
+            "justificatif" : {
+              "type" : "integer"
+            },
+            "type_frais" : {
+              "type" : "integer"
+            },
+            "commentaire" : {
+              "type" : "string"
+            },
+            "status" : {
+              "type" : "integer"
+            }
+          }
+        }
+      }
+    }
+  }

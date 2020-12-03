@@ -1,0 +1,58 @@
+version: "3"
+
+services:
+
+  front:
+    build: front
+    volumes:
+      - ./front:/home/node/app
+    ports:
+      - "8082:8080"
+    networks:
+      - bridge
+
+  back:
+    build: back
+    volumes:
+      - ./back:/home/node/app
+    ports:
+      - "3000:3000"
+    networks:
+      - bridge
+      
+  mysql:
+    container_name: money-mysql
+    image: mysql:8.0.19
+    ports:
+      - "3306:3306"
+    restart: unless-stopped
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      - MYSQL_DATABASE=countOfMoney
+      - MYSQL_USER=admin
+      - MYSQL_PASSWORD=admin
+      - MYSQL_RANDOM_ROOT_PASSWORD=yes
+
+    volumes:
+      - ./bdd/dbinit:/docker-entrypoint-initdb.d
+      - ./bdd/dbconf/dbconf.cnf:/etc/mysql/conf.d/dbconf.cnf
+      - data_mysql:/var/lib/mysql
+    networks:
+      - bridge
+
+  phpmyadmin:
+    container_name: money-phpmyadmin
+    image: phpmyadmin/phpmyadmin
+    restart: unless-stopped
+    ports:
+      - 2021:80
+    environment:
+      - PMA_HOST=mysql
+    networks:
+      - bridge
+
+networks:
+  bridge:
+
+volumes:
+  data_mysql:
